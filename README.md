@@ -28,3 +28,5 @@ In Python file:
 - Puparin, check out his github: [punparin (Parin Kobboon) (github.com)](https://github.com/punparin)
 - Ygoprodeck: [YGOPRODeck – Download and Share Yu-Gi-Oh! Decks](https://ygoprodeck.com/)
 - Ygorganization: [About our API – Card Database (ygorganization.com)](https://db.ygorganization.com/about/api)
+
+### For further information, contact me at my FB Page: https://www.facebook.com/minhlong.tran.589
