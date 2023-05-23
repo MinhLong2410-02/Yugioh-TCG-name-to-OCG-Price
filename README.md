@@ -22,7 +22,7 @@ Yuyutei scraper, Big Web API is from *Solomon.*
 >!pip install -r requirements.txt
 
 In Python file: \
-`from src.yugioh_card_lookup import CardLookup`
+`from src.yugioh_card_lookup.main import CardLookup`
 
 ### Credits goes to:
 - Puparin, check out his github: [punparin (Parin Kobboon) (github.com)](https://github.com/punparin)
