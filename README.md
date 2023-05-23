@@ -19,7 +19,8 @@ Fuzzy search gives out 3 most accurate card names if its string matching is not 
 Yuyutei scraper, Big Web API is from *Solomon.*
 
 ## How to use
->!pip install -r requirements.txt
+> Remember to create virtual enviroment before running
+`!pip install -r requirements.txt`
 
 In Python file: \
 `from src.yugioh_card_lookup.main import CardLookup`
