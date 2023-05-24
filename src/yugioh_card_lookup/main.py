@@ -4,7 +4,7 @@ from pprint import pprint
 from .BigWebPriceFinder import BigWebPriceFinder
 from .YuyuteiPriceFinder import YuyuteiPriceFinder
 from fuzzywuzzy import process
-from .ultimate_requests.name_to_id_dataset import name_to_id_dataset
+from .ultimate_requests.name_to_id_dataset import name_to_id_dataset, id_to_name_dataset
 from .NameConverter import NAME_CONVERTER
 
 def fuzzy_search(en_name, threshold=80, limit=3):
@@ -33,14 +33,19 @@ class CardLookup:
         self.card_img_urls = {}
         
     def execute_fuzzy_search(self, user_input):
-        
         self.cards = fuzzy_search(user_input)
         return (not self.cards is None)
     
     def get_card(self):
         return self.cards
-    
-    def execute_price_lookup_for_one_card(self, card_name: str):
+
+    def execute_search_by_id(self, id):
+        data = json.loads(id_to_name_dataset)
+        result = list(filter(lambda x: x["id"] == id, data["data"]))
+        name = result[0]["name"]
+        return name
+  
+    def execute_price_lookup_for_one_card(self, card_name):
         card_converter = NAME_CONVERTER(card_name)
         jp_name = card_converter.get_jp_name()
         prices = bigweb.find_prices(jp_name)
